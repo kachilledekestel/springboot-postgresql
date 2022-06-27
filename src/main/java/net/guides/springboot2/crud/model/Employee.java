@@ -12,18 +12,18 @@ import javax.persistence.Table;
 public class Employee {
 
 	private long id;
-	private String firstName;
-	private String lastName;
-	private String emailId;
+	private String nom;
+	private String prenom;
+	private String email;
 	
 	public Employee() {
 		
 	}
 	
-	public Employee(String firstName, String lastName, String emailId) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.emailId = emailId;
+	public Employee(String nom, String prenom, String email) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
 	}
 	
 	@Id
@@ -35,33 +35,33 @@ public class Employee {
 		this.id = id;
 	}
 	
-	@Column(name = "first_name", nullable = false)
-	public String getFirstName() {
-		return firstName;
+	@Column(name = "nom", nullable = false)
+	public String getNom() {
+		return nom;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	@Column(name = "last_name", nullable = false)
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	
-	@Column(name = "email_address", nullable = false)
-	public String getEmailId() {
-		return emailId;
+	@Column(name = "prenom", nullable = false)
+	public String getPrenom() {
+		return prenom;
 	}
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	
+	@Column(name = "email", nullable = false)
+	public String getEmail() {
+		return email;
+	}
+	public void setEmailId(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId
+		return "Employee [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email
 				+ "]";
 	}
 	
